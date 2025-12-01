@@ -1,0 +1,37 @@
+:root {
+    --haze-color-0: rgb(255, 215, 0);
+    --haze-color-100: rgb(255, 225, 58);
+
+    --neutral-color-0: rgba(255, 255, 255, 100%);
+    --neutral-color-100: rgba(251, 251, 251, 100%);
+    --neutral-color-200: rgba(243, 243, 243, 100%);
+    --neutral-color-300: rgba(236, 236, 236, 100%);
+    --neutral-color-400: rgba(191, 191, 191, 100%);
+    --neutral-color-500: rgba(140, 140, 140, 100%);
+    --neutral-color-600: rgba(108, 108, 108, 100%);
+    --neutral-color-700: rgba(57, 57, 57, 100%);
+    --neutral-color-800: rgba(28, 28, 28, 100%);
+    --neutral-color-900: rgba(20, 20, 20, 100%);
+
+    --nav-color-0: rgba(0, 31, 63, 1);
+    --nav-color-100: rgb(0, 40, 80);
+}
+
+[data-theme="dark"] {
+    --haze-color-0: rgb(232, 151, 0);
+    --haze-color-100: rgb(232, 164, 37);
+
+    --neutral-color-0: rgba(20, 20, 20, 100%);
+    --neutral-color-100: rgba(28, 28, 28, 100%);
+    --neutral-color-200: rgba(38, 38, 38, 100%);
+    --neutral-color-300: rgba(51, 51, 51, 100%);
+    --neutral-color-400: rgba(108, 108, 108, 100%);
+    --neutral-color-500: rgba(140, 140, 140, 100%);
+    --neutral-color-600: rgba(191, 191, 191, 100%);
+    --neutral-color-700: rgba(236, 236, 236, 100%);
+    --neutral-color-800: rgba(251, 251, 251, 100%);
+    --neutral-color-900: rgba(255, 255, 255, 100%);
+
+    --nav-color-0: rgba(37, 37, 37, 1);
+    --nav-color-100: rgb(42, 42, 42);
+}
