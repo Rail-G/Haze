@@ -1,10 +1,11 @@
-import React from "react";
+import { JSX } from "react";
 import styles from './header.module.scss'
 import Icon from "../icon/Icon";
 import { siteConfig } from "@/config/site.config";
 import Link from "next/link";
+import { ROUTES } from "@/constants/routes";
 
-export default function Header(): React.ReactNode {
+export default function Header(): JSX.Element {
     return (
         <header>
             <div className={styles.rectangle}>
@@ -38,8 +39,8 @@ export default function Header(): React.ReactNode {
                             </ul>
                         </nav>
                         <div className={styles['auth-block']}>
-                            <Link href={'/'} className={styles.auth}>Авторизация</Link>
-                            <Link href={'/'} className={styles.auth}>Регистрация</Link>
+                            <Link href={ROUTES.AUTHENTICATION} className={styles.auth}>Авторизация</Link>
+                            <Link href={ROUTES.REGISTRATION} className={styles.auth}>Регистрация</Link>
                         </div>
                     </div>
                 </div>

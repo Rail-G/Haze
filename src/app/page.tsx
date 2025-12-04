@@ -1,9 +1,11 @@
-import Header from "@/components/header/Header";
-import Image from "next/image";
-// import styles from "@/styles/normalize.scss"
+import NewsBlock from "@/components/newsBlock/NewsBlock";
+import NewsList from "@/components/newsList/NewsList";
 
 export default function Home() {
   return (
-    <Header />
+    <>
+      <NewsBlock />
+      <NewsList />
+    </>
   );
 }

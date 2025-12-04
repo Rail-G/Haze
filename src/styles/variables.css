@@ -15,9 +15,11 @@
 
     --nav-color-0: rgba(0, 31, 63, 1);
     --nav-color-100: rgb(0, 40, 80);
+
+    --shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
     --haze-color-0: rgb(232, 151, 0);
     --haze-color-100: rgb(232, 164, 37);
 
@@ -34,4 +36,6 @@
 
     --nav-color-0: rgba(37, 37, 37, 1);
     --nav-color-100: rgb(42, 42, 42);
+
+    --shadow: rgba(162, 162, 187, 0.25) 0px 2px 5px -1px, rgba(255, 255, 255, 0.3) 0px 1px 3px -1px;
 }

@@ -1,0 +1,13 @@
+.news-list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.items {
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: max-content;
+    gap: 50px;
+}

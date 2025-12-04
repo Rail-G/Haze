@@ -1,0 +1,99 @@
+.block {
+    width: 80%;
+    padding-top: 25px;
+    position: relative;
+    font-size: 13px;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 10px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: -14%;
+        right: -14%;
+        bottom: -25px;
+        height: 1px;
+        display: block;
+        background-color: var(--neutral-color-400);
+    }
+
+    .news {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        .image {
+            border-radius: 8px;
+            width: 40vh;
+            height: 29vh;
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+                width: 25vh;
+                height: 20vh;
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+
+            .title {
+                font-size: 1.8em;
+                color: var(--neutral-color-900);
+                font-weight: 500;
+            }
+
+            .paragraph {
+                color: var(--neutral-color-500);
+                font-size: 1.2em;
+            }
+
+            .info-content {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding-top: 10px;
+
+                .info-block {
+                    display: flex;
+                    gap: 30px;
+
+                    .info-item {
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 1em;
+
+                        .info-title {
+                            color: var(--neutral-color-500)
+                        }
+
+                        .info-description {
+                            color: var(--neutral-color-900)
+                        }
+                    }
+                }
+
+                .button {
+                    justify-self: flex-end;
+                    padding: 15px 10px;
+                    background-color: var(--neutral-color-200);
+                    border-radius: 10px;
+                    border: 1px solid var(--neutral-color-400);
+                    color: var(--neutral-color-500);
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: var(--neutral-color-300);
+                        border-color: var(--neutral-color-500);
+                        color: var(--neutral-color-600);
+                    }
+                }
+
+            }
+        }
+    }
+}

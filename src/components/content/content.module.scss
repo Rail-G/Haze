@@ -1,0 +1,11 @@
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--neutral-color-200);
+    flex-grow: 1;
+    font-family: var(--poppins);
+    gap: 50px;
+    padding: 25px 10px 10px;
+    overflow-x: hidden;
+}
