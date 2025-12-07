@@ -1,0 +1,16 @@
+.button {
+    align-self: flex-end;
+    padding: 15px 10px;
+    background-color: var(--neutral-color-200);
+    border-radius: 10px;
+    border: 1px solid var(--neutral-color-400);
+    color: var(--neutral-color-500);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--neutral-color-300);
+        border-color: var(--neutral-color-500);
+        color: var(--neutral-color-600);
+    }
+}
