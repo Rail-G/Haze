@@ -4,37 +4,33 @@
     justify-content: space-between;
     height: 100%;
     gap: 10px;
+    overflow: hidden;
+    font-size: 13px;
+    max-width: 250px;
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 10px;
+    }
 
     .image {
         border-radius: 8px;
         width: 100%;
+        max-width: 250px;
         height: 20vh;
-
+        max-height: 160px;
+        object-fit: cover;
     }
 
     .title {
         color: var(--neutral-color-900);
-        font-size: 13px;
+        font-size: 1em;
+        overflow-x: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     .category {
         color: var(--neutral-color-500);
-        font-size: 12px;
+        font-size: 0.95em;
     }
-
-    .button {
-                align-self: flex-end;
-                padding: 15px 10px;
-                background-color: var(--neutral-color-200);
-                border-radius: 10px;
-                border: 1px solid var(--neutral-color-400);
-                color: var(--neutral-color-500);
-                cursor: pointer;
-
-                &:hover {
-                    background-color: var(--neutral-color-300);
-                    border-color: var(--neutral-color-500);
-                    color: var(--neutral-color-600);
-                }
-            }
 }

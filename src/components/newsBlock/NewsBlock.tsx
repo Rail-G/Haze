@@ -1,12 +1,13 @@
 import { JSX } from "react";
 import styles from './newsBlock.module.scss'
 import Image from "next/image";
+import Button from "../button/Button";
 
 export default function NewsBlock(): JSX.Element {
     return (
         <div className={styles.block}>
             <div className={styles.news}>
-                <Image src='/delegaciya.jpg' width={310} height={240} className={styles.image} alt="delegaciya" />
+                <Image src='/default.jpg' width={310} height={240} className={styles.image} alt="delegaciya" />
                 <div className={styles.content}>
                     <h3 className={styles.title}>Global Climate Summit Addresses Urgent Climate Action</h3>
                     <p className={styles.paragraph}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit alias reprehenderit quos quis perferendis, vero dignissimos ullam quo amet iusto accusantium necessitatibus officia cum numquam temporibus maxime laborum, consectetur vitae.</p>
@@ -25,7 +26,7 @@ export default function NewsBlock(): JSX.Element {
                                 <span className={styles['info-description']}>Administrator</span>
                             </div>
                         </div>
-                        <button className={styles.button}>Читать</button>
+                        <Button />
                     </div>
                 </div>
             </div>

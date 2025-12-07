@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${poppins.variable}`}>
+      <body className={`${poppins.variable}`} data-theme='dark'>
         <Header />
         <Content>
           {children}

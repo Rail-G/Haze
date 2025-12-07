@@ -133,6 +133,8 @@
                 &:hover {
                     background-color: var(--nav-color-100);
                     color: #d1d1d1;
+                    padding-bottom: 12px;
+                    border-bottom: 2px solid white;
                 }
             }
         }
