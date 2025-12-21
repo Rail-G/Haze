@@ -16,6 +16,8 @@
     --nav-color-0: rgba(0, 31, 63, 1);
     --nav-color-100: rgb(0, 40, 80);
 
+    --green-color: rgb(58, 171, 109);
+
     --shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
@@ -36,6 +38,8 @@
 
     --nav-color-0: rgba(37, 37, 37, 1);
     --nav-color-100: rgb(42, 42, 42);
+
+    --green-color: rgba(90, 200, 139, 1);
 
     --shadow: rgba(162, 162, 187, 0.25) 0px 2px 5px -1px, rgba(255, 255, 255, 0.3) 0px 1px 3px -1px;
 }

@@ -1,0 +1,44 @@
+.block {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    .circle {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: white;
+        animation: loader-anim 2s 400ms infinite;
+
+        &:nth-child(2) {
+            background-color: red;
+            animation-delay: 500ms;
+        }
+
+        &:nth-child(3) {
+            background-color: var(--haze-color-0);
+            animation-delay: 700ms;
+        }
+
+        &:nth-child(4) {
+            background-color: red;
+            animation-delay: 900ms;
+        }
+
+        &:nth-child(5) {
+            animation-delay: 1.1s;
+        }
+    }
+}
+
+@keyframes loader-anim {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(25px);
+    }
+}
+
