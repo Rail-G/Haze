@@ -1,0 +1,25 @@
+.task-body {
+    width: 80%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    color: var(--neutral-color-900);
+
+    .task-title {
+        text-align: center;
+    }
+
+    .task-list {
+    width: 100%;
+    padding: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    .task-item {
+        width: 32%;
+    }
+}
+
+}

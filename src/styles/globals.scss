@@ -7,4 +7,5 @@ body {
     display: flex;
     flex-direction: column;
     overflow-y: hidden;
+    scrollbar-color: var(--neutral-color-900) transparent;
 }
