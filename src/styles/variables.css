@@ -14,9 +14,14 @@
     --neutral-color-900: rgba(20, 20, 20, 100%);
 
     --nav-color-0: rgba(0, 31, 63, 1);
-    --nav-color-100: rgb(0, 40, 80);
+    --nav-color-100: rgba(0, 40, 80, 1);
 
-    --green-color: rgb(58, 171, 109);
+    --green-color: rgba(58, 171, 109, 1);
+
+    --yellow-color: rgba(255, 255, 0, 1);
+
+    --red-color-100: rgba(178, 34, 34, 1);
+    --red-color-200: rgb(206, 30, 30);
 
     --shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
@@ -37,9 +42,14 @@
     --neutral-color-900: rgba(255, 255, 255, 100%);
 
     --nav-color-0: rgba(37, 37, 37, 1);
-    --nav-color-100: rgb(42, 42, 42);
+    --nav-color-100: rgba(42, 42, 42, 1);
 
     --green-color: rgba(90, 200, 139, 1);
+
+    --yellow-color: rgba(255, 255, 0, 1);
+
+    --red-color-100: rgba(178, 34, 34, 1);
+    --red-color-200: rgb(206, 30, 30);
 
     --shadow: rgba(162, 162, 187, 0.25) 0px 2px 5px -1px, rgba(255, 255, 255, 0.3) 0px 1px 3px -1px;
 }
