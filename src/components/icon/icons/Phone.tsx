@@ -1,6 +1,6 @@
-import React from "react";
+import React, { JSX } from "react";
 
-export default function Phone(props: React.SVGProps<SVGSVGElement>): React.ReactNode {
+export default function Phone(props: React.SVGProps<SVGSVGElement>): JSX.Element {
     return (
         <svg viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" {...props}>
             <g id="🔍-Product-Icons" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">

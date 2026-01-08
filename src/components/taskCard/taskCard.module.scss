@@ -1,3 +1,7 @@
+@function bacgroundColor($color) {
+    @return repeating-linear-gradient(-45deg, $color 0, $color 12.5%, transparent 0, transparent 25%) 0 / 100px 100px;
+}
+
 .card {
     width: 100%;
     border: 1px solid var(--neutral-color-500);
@@ -6,7 +10,8 @@
     border: 1px solid var(--neutral-color-300);
     font-size: 13px;
     background-color: var(--neutral-color-100);
-    
+    position: relative;
+
     &:hover {
         transform: scale(1.02);
         border: 1px solid var(--neutral-color-500);
@@ -20,7 +25,7 @@
     }
 
     .body {
-        padding: 10px 10px 20px;
+        padding: 10px 15px 20px;
         display: flex;
         flex-direction: column;
         gap: 8px;
@@ -51,6 +56,12 @@
                 padding-left: 15px;
                 list-style-type: disclosure-closed;
             }
+
+            span {
+                width: 100%;
+                display: inline-block;
+                text-align: center;
+            }
         }
 
         .button {
@@ -65,6 +76,7 @@
             background-color: var(--green-color);
             letter-spacing: 2;
             font-weight: 500;
+            margin-top: 15px;
 
             &::before {
                 content: '';
@@ -93,6 +105,73 @@
                 }
 
             }
+        }
+    }
+
+    .status {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: 700;
+        font-size: 25px;
+        border: 15px solid transparent;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.75);
+        z-index: 2;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            bottom: -15px;
+            right: -15px;
+            left: -15px;
+            border: inherit;
+            border-radius: inherit;
+
+            mask:
+                linear-gradient(white, white) padding-box,
+                linear-gradient(white, white);
+            mask-composite: exclude;
+        }
+    }
+
+    .progress {
+        color: var(--haze-color-0);
+        &::before {
+            content: '';
+            background: bacgroundColor(var(--haze-color-0));
+        }
+    }
+
+    .done {
+        color: var(--green-color);
+        &::before {
+            content: '';
+            background: bacgroundColor(var(--green-color));
+        }
+    }
+
+    .waiting {
+        color: var(--yellow-color);
+        &::before {
+            content: '';
+            background: bacgroundColor(var(--yellow-color));
+        }
+    }
+
+    .error {
+        color: var(--red-color);
+        &::before {
+            content: '';
+            background: bacgroundColor(var(--red-color-100));
         }
     }
 }

@@ -15,7 +15,7 @@ export default function NewsItem({image, title, category}: INewsItem): JSX.Eleme
             <Image src={image} width={150} height={120} className={styles.image} alt="delegaciya"/>
             <h4 className={styles.title}>{title}</h4>
             <span className={styles.category}>{category}</span>
-            <Button />
+            <Button className={styles.button} title="Читать"/>
         </div>
     )
 }

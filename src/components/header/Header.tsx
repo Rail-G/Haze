@@ -33,7 +33,7 @@ export default function Header(): JSX.Element {
                             <ul className={styles.list}>
                                 {siteConfig.navItems.map(({href, title}) => {
                                     return <li key={title}>
-                                        <Link href={href}>{title}</Link>
+                                        <Link href={href} className={styles.link}>{title}</Link>
                                         </li>
                                 })}
                             </ul>

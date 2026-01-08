@@ -2,6 +2,7 @@ import { JSX } from "react";
 import styles from './newsBlock.module.scss'
 import Image from "next/image";
 import Button from "../button/Button";
+import InfoBlockItem from "./ingoBlockItem/InfoBlockItem";
 
 export default function NewsBlock(): JSX.Element {
     return (
@@ -13,20 +14,11 @@ export default function NewsBlock(): JSX.Element {
                     <p className={styles.paragraph}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit alias reprehenderit quos quis perferendis, vero dignissimos ullam quo amet iusto accusantium necessitatibus officia cum numquam temporibus maxime laborum, consectetur vitae.</p>
                     <div className={styles['info-content']}>
                         <div className={styles['info-block']}>
-                            <div className={styles['info-item']}>
-                                <span className={styles['info-title']}>Category</span>
-                                <span className={styles['info-description']}>Test</span>
-                            </div>
-                            <div className={styles['info-item']}>
-                                <span className={styles['info-title']}>Published</span>
-                                <span className={styles['info-description']}>0.00.0000</span>
-                            </div>
-                            <div className={styles['info-item']}>
-                                <span className={styles['info-title']}>Author</span>
-                                <span className={styles['info-description']}>Administrator</span>
-                            </div>
+                            <InfoBlockItem title="Category" description="Test"/>
+                            <InfoBlockItem title="Published" description="0.00.0000"/>
+                            <InfoBlockItem title="Author" description="Administrator"/>
                         </div>
-                        <Button />
+                        <Button className={styles.button} title="Читать"/>
                     </div>
                 </div>
             </div>

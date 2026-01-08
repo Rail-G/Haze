@@ -1,0 +1,13 @@
+.info-item {
+    display: flex;
+    flex-direction: column;
+    font-size: 1em;
+
+    .info-title {
+        color: var(--neutral-color-500)
+    }
+
+    .info-description {
+        color: var(--neutral-color-900)
+    }
+}
