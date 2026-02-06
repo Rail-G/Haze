@@ -1,7 +1,7 @@
 import { JSX } from "react";
 import styles from './reportItem.module.scss'
 import Image from "next/image";
-import Popup from "../popup/Popup";
+import ImagePopup from "../imagePopup/ImagePopup";
 
 export default function ReportItem(): JSX.Element {
     return (
@@ -23,14 +23,14 @@ export default function ReportItem(): JSX.Element {
                 <div className={styles['img-block']}>
                     <span>Фото отчет</span>
                     <ul className={styles.list}>
-                        <li><Popup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></Popup></li>
-                        <li><Popup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></Popup></li>
-                        <li><Popup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></Popup></li>
-                        <li><Popup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></Popup></li>
-                        <li><Popup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></Popup></li>
-                        <li><Popup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></Popup></li>
-                        <li><Popup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></Popup></li>
-                        <li><Popup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></Popup></li>
+                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
+                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
+                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
+                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
+                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
+                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
+                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
+                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
                     </ul>
                 </div>
             </div>
