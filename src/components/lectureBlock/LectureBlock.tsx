@@ -3,7 +3,7 @@ import EmptyData from '../emptyData/EmptyData'
 import Icon from '../icon/Icon'
 import styles from './lectureBlock.module.scss'
 import ReportItem from '../reportItem/ReportItem'
-import Popup from '../popup/Popup'
+import Popup from '../imagePopup/ImagePopup'
 
 export default function LectureBlock(): JSX.Element {
     return (

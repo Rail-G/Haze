@@ -2,7 +2,7 @@ import { JSX } from "react";
 import styles from './newsBlock.module.scss'
 import Image from "next/image";
 import Button from "../button/Button";
-import InfoBlockItem from "./ingoBlockItem/InfoBlockItem";
+import InfoBlockItem from "./infoBlockItem/InfoBlockItem";
 
 export default function NewsBlock(): JSX.Element {
     return (
