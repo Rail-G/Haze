@@ -13,7 +13,7 @@ export default function TaskCondition(): JSX.Element {
     };
 
     const insertCondition = () => {
-        if (conditionFields.length >= 5) return
+        if (conditionFields.length >= 3) return
         setConditionFields([...conditionFields, { id: uuid(), value: '' }])
     }
 

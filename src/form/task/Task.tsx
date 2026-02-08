@@ -8,7 +8,9 @@ export default function TaskForm(): JSX.Element {
     return (
         <div className={styles.popup}>
             <div className={styles.block}>
-                <div className={styles['close-btn']}></div>
+                <div className={styles['close-btn']}>
+                    <Icon iconName="minus" width='25px' height='25px'/>
+                </div>
                 <div className={styles.header}>
                     <h2 className={styles.title}>Создания задачи</h2>
                 </div>
@@ -27,6 +29,15 @@ export default function TaskForm(): JSX.Element {
                             <input type="number" id="number" name="number" className={styles.input} placeholder="Введите число" required />
                         </div>
                         <TaskCondition />
+                        <div className={styles['form-row']}>
+                            <label className={styles.label}>Фото обложки</label>
+                            <div>
+                                <label htmlFor="file" className={styles['file-input']}>
+                                    Выбрать фото
+                                </label>
+                                <input type="file" name="file" id="file" accept="image/png, image/jpg, image/jpeg"/>
+                            </div>
+                        </div>
                         <div>
                             <button type="submit" className={styles.button}>Создать задачу</button>
                         </div>
