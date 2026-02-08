@@ -4,6 +4,7 @@ import Icon from "../icon/Icon";
 import { siteConfig } from "@/config/site.config";
 import Link from "next/link";
 import { ROUTES } from "@/constants/routes";
+import Image from "next/image";
 
 export default function Header(): JSX.Element {
     return (
@@ -38,9 +39,26 @@ export default function Header(): JSX.Element {
                                 })}
                             </ul>
                         </nav>
-                        <div className={styles['auth-block']}>
+                        <div className={styles['toggle-block']}>
+                            <div className={styles.toggle}>
+                                <input type="checkbox" className={styles.checkbox}/>
+                                <div className={styles.switch}></div>
+                            </div>
+                        </div>
+                        {/* <div className={styles['auth-block']}>
                             <Link href={ROUTES.AUTHENTICATION} className={styles.auth}>Авторизация</Link>
                             <Link href={ROUTES.REGISTRATION} className={styles.auth}>Регистрация</Link>
+                        </div> */}
+                        <div className={styles['profile-block']}>
+                            <div className={styles.profile}>
+                                <Image src={'/default.jpg'} className={styles['profile-img']} width={250} height={250} alt="profile image"/>
+                                <div className={styles['profile-info']}>
+                                    <span>
+                                        Rail Diablo
+                                    </span>
+                                </div>
+                            </div>
+                            <Link href={ROUTES.REGISTRATION} className={styles.auth}>Выйти</Link>
                         </div>
                     </div>
                 </div>
