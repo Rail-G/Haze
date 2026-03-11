@@ -1,9 +1,16 @@
 'use client'
 import { JSX, useState } from "react";
-import styles from './task.module.scss'
+import styles from './common.module.scss'
 import Icon from "@/components/icon/Icon";
 import {v4 as uuid} from 'uuid'
-export default function TaskCondition(): JSX.Element {
+import Button from "@/components/button/Button";
+
+type ICondition = {
+    title: string,
+    placeholder: string
+}
+
+export default function Condition({title, placeholder}: ICondition): JSX.Element {
     const [conditionFields, setConditionFields] = useState(Array(1).fill({ id: uuid(), value: '' }))
 
     const handleChange = (index: number, e: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,18 +31,18 @@ export default function TaskCondition(): JSX.Element {
     return (
         <div className={styles['form-row']}>
             <div className={styles['label-block']}>
-                <label htmlFor="number" className={styles.label}>Дополнительные условия</label>
-                <button type="button" className={styles['task-btn']} onClick={insertCondition}>
+                <label htmlFor="number" className={styles.label}>{title}</label>
+                <Button type="button" className={styles['task-btn']} onClick={insertCondition}>
                     <Icon iconName="plus" width='15px' height='15px' />
-                </button>
+                </Button>
             </div>
             <div className={styles['condition-block']}>
                 {conditionFields.map((value, index) => (
                     <div key={value.id} className={styles['condition-row']}>
-                        <input type="text" id="number" name="number" value={conditionFields[index].value} onChange={(e) => handleChange(index, e)} className={`${styles.input} ${styles['condition-input']}`} placeholder="Как усложним?" required />
-                        <button type="button" onClick={() => handleDelete(value.id)} className={styles['task-btn']}>
+                        <input type="text" id="number" name="number" value={conditionFields[index].value} onChange={(e) => handleChange(index, e)} className={`${styles.input} ${styles['condition-input']}`} placeholder={placeholder} required />
+                        <Button type="button" onClick={() => handleDelete(value.id)} className={styles['task-btn']}>
                             <Icon iconName="minus" width='15px' height='15px' />
-                        </button>
+                        </Button>
                     </div>
                 ))}
             </div>

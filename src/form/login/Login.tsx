@@ -1,6 +1,7 @@
 import { JSX } from "react";
-import styles from './login.module.scss'
+import styles from '@/form/common/common.module.scss'
 import Icon from "@/components/icon/Icon";
+import Button from "@/components/button/Button";
 
 export default function LoginForm(): JSX.Element {
     return (
@@ -10,7 +11,7 @@ export default function LoginForm(): JSX.Element {
                     <h2 className={styles.title}>Подтверждения личности</h2>
                 </div>
                 <form noValidate>
-                    <div className={styles['form-block']}>
+                    <div>
                         <div className={`${styles['form-row']} ${styles['grid-row']}`}>
                             <div>
                                 <label htmlFor="firstName" className={styles.label}>Имя</label>
@@ -33,7 +34,7 @@ export default function LoginForm(): JSX.Element {
                             </div>
                         </div>
                         <div>
-                            <button type="submit" className={styles.button}>Создать аккаунт</button>
+                            <Button type="submit" title="Создать аккаунт" className={styles.button}/>
                         </div>
                         <div className={styles['sign-up']}>
                             <p>

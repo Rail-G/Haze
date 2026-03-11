@@ -2,8 +2,9 @@ import { JSX } from "react";
 import styles from '@/form/common/common.module.scss'
 import Icon from "@/components/icon/Icon";
 import Button from "@/components/button/Button";
+import Condition from "../common/Condition";
 
-export default function LectureForm(): JSX.Element {
+export default function TaskDoneForm(): JSX.Element {
     return (
         <div className={styles.popup}>
             <div className={styles.block}>
@@ -11,16 +12,12 @@ export default function LectureForm(): JSX.Element {
                     <Icon iconName="minus" width='25px' height='25px'/>
                 </div>
                 <div className={styles.header}>
-                    <h2 className={styles.title}>Отчет об обучении</h2>
+                    <h2 className={styles.title}>Отчет о выполнении</h2>
                 </div>
                 <form noValidate>
                     <div>
                         <div className={styles['form-row']}>
-                            <label htmlFor="count" className={`${styles.label} ${styles.require}`}>Количество обученных студентов</label>
-                            <input type="number" id="count" name="count" className={styles.input} placeholder="Введите цифру" required />
-                        </div>
-                        <div className={styles['form-row']}>
-                            <label className={styles.label}>Вмешательство стороних лекторов</label>
+                            <label className={styles.label}>Присутствие научного отряда</label>
                             <div className={styles['radio-block']}>
                                 <label className={styles.radio}>
                                     <input type="radio" id="count" name="intervention" className={`${styles.input} ${styles['radio-input']}`} placeholder="••••••••" value={1} />
@@ -32,6 +29,7 @@ export default function LectureForm(): JSX.Element {
                                 </label>
                             </div>
                         </div>
+                        <Condition title="Данные члена научного отряда" placeholder="Имя и фамилия"/>
                         <div className={styles['form-row']}>
                             <label className={styles.label}>Фото отчет</label>
                             <div>

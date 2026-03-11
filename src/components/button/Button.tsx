@@ -1,17 +1,21 @@
 "use client"
 
-import { JSX } from "react";
-import styles from './button.module.scss'
+import React, { JSX, ReactNode } from "react";
 
 interface IButton {
+    type: React.ButtonHTMLAttributes<HTMLButtonElement>['type'],
+    title?: string,
+    children?: ReactNode,
     className: string,
-    title: string,
     onClick?: () => void
 }
 
-export default function Button({title, className, onClick}: IButton): JSX.Element {
+export default function Button({type, title, children, className, onClick}: IButton): JSX.Element {
     const handleClick = onClick || (() => {})
     return (
-        <button className={className} onClick={handleClick}>{title}</button>
+        <button type={type} className={className} onClick={handleClick}>
+            {title}
+            {children}
+        </button>
     )
 }

@@ -9,3 +9,40 @@ body {
     overflow-y: hidden;
     scrollbar-color: var(--neutral-color-900) transparent;
 }
+
+code {
+    background-color: rgb(238, 238, 238);
+    border-radius: 3px;
+    font-family: monospace;
+    padding: 0 3px;
+}
+
+pre {
+    background-color: rgb(152, 152, 152);
+    width: 100%;
+    padding: 5px;
+
+}
+
+hr {
+    width: 100%;
+}
+
+td, tr, th {
+    padding: 3px 4px;
+    border: 1px solid var(--neutral-color-900);
+}
+
+th:nth-child(odd) {
+    background-color: orange;
+    color: white;
+}
+
+th:nth-child(even) {
+    background-color: white;
+    color: orange;
+}
+
+table {
+    border-collapse: collapse;
+}

@@ -1,8 +1,9 @@
 'use client'
 import { JSX, useState } from "react";
-import styles from './task.module.scss'
+import styles from '@/form/common/common.module.scss'
 import Icon from "@/components/icon/Icon";
-import TaskCondition from "./TaskCondition";
+import Condition from "@/form/common/Condition";
+import Button from "@/components/button/Button";
 
 export default function TaskForm(): JSX.Element {
     return (
@@ -15,20 +16,20 @@ export default function TaskForm(): JSX.Element {
                     <h2 className={styles.title}>Создания задачи</h2>
                 </div>
                 <form noValidate>
-                    <div className={styles['form-block']}>
+                    <div >
                         <div className={styles['form-row']}>
                             <label htmlFor="text" className={styles.label}>Заголовок задачи</label>
                             <input type="text" id="text" name="text" className={styles.input} placeholder="Почистить снег" required />
                         </div>
                         <div className={styles['form-row']}>
                             <label htmlFor="textArea" className={styles.label}>Описания задачи</label>
-                            <textarea id="textArea" name="textArea" className={styles.input} placeholder="Сегодня я решил почистить снего, потому что..." required />
+                            <textarea id="textArea" name="textArea" className={`${styles.input} ${styles.textarea}`} placeholder="Сегодня я решил почистить снего, потому что..." required />
                         </div>
                         <div className={styles['form-row']}>
                             <label htmlFor="number" className={styles.label}>Вознаграждение</label>
                             <input type="number" id="number" name="number" className={styles.input} placeholder="Введите число" required />
                         </div>
-                        <TaskCondition />
+                        <Condition title="Дополнительные условия" placeholder="Как усложним?"/>
                         <div className={styles['form-row']}>
                             <label className={styles.label}>Фото обложки</label>
                             <div>
@@ -39,7 +40,7 @@ export default function TaskForm(): JSX.Element {
                             </div>
                         </div>
                         <div>
-                            <button type="submit" className={styles.button}>Создать задачу</button>
+                            <Button type="submit" title="Создать задачу" className={styles.button}/>
                         </div>
                     </div>
                 </form>

@@ -50,12 +50,33 @@
             }
         }
 
+        .form-block {
+            display: flex;
+            gap: 20px;
+            height: 550px;
+            
+            .form-column {
+                
+                &:first-child {
+                    width: 30%;
+                }
+
+                &:last-child {
+                    width: 70%;
+                }
+            }
+        }
+
         .form-row {
             margin-top: 25px;
             position: relative;
 
             &:first-child {
                 margin-top: 0px;
+            }
+
+            &:nth-child(4) {
+                margin-top: 35px;
             }
 
             .icon-block {
@@ -81,11 +102,57 @@
                 }
             }
 
+            .radio-block {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 7px;
+                margin-top: 8px;
+                color: var(--haze-color-0);
+
+                .radio-input {
+                    width: 18px;
+                    height: 18px;
+                }
+
+                .radio {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    cursor: pointer;
+                }
+            }
+
+            .require {
+
+                &::after {
+                    content: '*';
+                    margin-left: 5px;
+                    color: rgb(255, 47, 47);
+                }
+            }
+
+            .tip {
+                margin-top: 5px;
+                color: var(--neutral-color-500);
+                font-size: 0.8em;
+                font-weight: 700;
+                position: absolute;
+            }
+
+            .error {
+                color: red;
+            }
+
             .label {
                 display: block;
                 font-weight: 700;
                 color: var(--haze-color-100);
                 font-size: 1.15em;
+            }
+
+            .term {
+                height: 17px;
+                width: 17px;
             }
 
             .file-input {
@@ -108,12 +175,14 @@
                 }
             }
 
+            .inform-text {
+                display: inline-block;
+                margin-top: 8px;
+            }
+
             .input {
-                max-width: 100%;
-                min-width: 100%;
-                min-height: 2.5em;
-                max-height: 8em;
-                padding: 8px 0px;
+                width: 100%;
+                padding: 8px 0px 8px 0px;
                 border: 0;
                 border-bottom: 1px solid black;
                 outline: none;
@@ -123,6 +192,13 @@
                 &::placeholder {
                     color: var(--neutral-color-500);
                 }
+            }
+
+            .textarea {
+                max-width: 100%;
+                min-width: 100%;
+                min-height: 2.5em;
+                max-height: 8em;
             }
 
             .condition-row {
@@ -163,6 +239,12 @@
 
         }
 
+        .term-row {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
         .link {
             color: rgba(79, 70, 229, 1);
             margin-left: 4px;
@@ -180,7 +262,7 @@
             gap: 16px;
         }
 
-        .sign-up {
+        .sign-up, .sign-in {
             margin-top: 15px;
             text-align: center;
         }
@@ -199,7 +281,31 @@
 
             &:hover {
                 background-color: var(--haze-color-0);
+                transform: scale(1.02);
+            }
+        }
+    }
+
+    .news-block {
+        max-width: 1200px;
+
+        .form-row {
+            .input {
+                max-height: 16em;
+            }
+
+            .editor-plugin {
+                border: 0;
+
+                .editor-style {
+                    font-family: var(--poppin);
+                    max-height: 420px;
+                    min-height: 420px;
+                }
             }
         }
     }
 }
+
+
+// color: var(--neutral-color-900); display: flex; align-items: center; flex-direction: column; justidy-content: center; padding: 25px; gap: 15px
