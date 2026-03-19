@@ -48,6 +48,7 @@
                 font-size: 2em;
                 color: var(--haze-color-100);
             }
+            
         }
 
         .form-block {
@@ -148,6 +149,10 @@
                 font-weight: 700;
                 color: var(--haze-color-100);
                 font-size: 1.15em;
+
+                span {
+                    margin-left: 10px;
+                }
             }
 
             .term {
@@ -243,6 +248,10 @@
             display: flex;
             align-items: center;
             gap: 7px;
+            
+            p {
+                margin-top: 20px;
+            }
         }
 
         .link {
@@ -294,8 +303,18 @@
                 max-height: 16em;
             }
 
+        }
+
+        .editor-row {
+            height: 100%;
+
+            .input {
+                max-height: none;
+            }
+
             .editor-plugin {
                 border: 0;
+                height: 100%;
 
                 .editor-style {
                     font-family: var(--poppin);
