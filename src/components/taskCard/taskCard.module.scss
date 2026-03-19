@@ -168,7 +168,7 @@
     }
 
     .error {
-        color: var(--red-color);
+        color: var(--red-color-100);
         &::before {
             content: '';
             background: bacgroundColor(var(--red-color-100));

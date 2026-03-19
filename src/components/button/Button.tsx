@@ -11,9 +11,8 @@ interface IButton {
 }
 
 export default function Button({type, title, children, className, onClick}: IButton): JSX.Element {
-    const handleClick = onClick || (() => {})
     return (
-        <button type={type} className={className} onClick={handleClick}>
+        <button type={type} className={className} onClick={onClick}>
             {title}
             {children}
         </button>
