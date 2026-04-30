@@ -32,14 +32,21 @@ export interface INewsItem {
     image: string
 }
 
-export interface ISubmitTaskData {
-    intervention: string;
-    staffs: string[];
-    images: File[];
-}
-
 export interface ILectureItem {
     count: string;
     intervention: string;
+    images: File[];
+}
+
+export interface ILectureItemBlock {
+    author: string,
+    role: string,
+    date: string,
+    data: ILectureItem
+}
+
+export interface ISubmitTaskData {
+    intervention: string;
+    staffs: string[];
     images: File[];
 }
