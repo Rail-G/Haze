@@ -11,10 +11,11 @@ body {
 }
 
 code {
-    background-color: rgb(238, 238, 238);
+    background-color: rgb(208, 208, 208);
     border-radius: 3px;
     font-family: monospace;
     padding: 0 3px;
+    // color: black;
 }
 
 pre {
@@ -28,21 +29,25 @@ hr {
     width: 100%;
 }
 
-td, tr, th {
-    padding: 3px 4px;
-    border: 1px solid var(--neutral-color-900);
+.se-component {
+  display: block;
 }
 
-th:nth-child(odd) {
-    background-color: orange;
-    color: white;
+.__se__float-center {
+    display: flex;
+    justify-content: center;
 }
 
-th:nth-child(even) {
-    background-color: white;
-    color: orange;
+.__se__float-right {
+  float: right;
 }
 
-table {
-    border-collapse: collapse;
+.__se__float-left {
+  float: left;
+}
+
+figure {
+    img {
+        max-width: 100%
+    }
 }

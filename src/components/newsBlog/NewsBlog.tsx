@@ -1,8 +1,14 @@
-import { JSX } from "react";
+'use client'
+import { JSX, useEffect } from "react";
 import styles from './newsBlog.module.scss'
 import Image from "next/image";
+import { useNewsStore } from "@/store/NewsStore";
+import DOMPurify from 'dompurify'
+import Loader from "../loader/Loader";
+import DescriptionItem from "./descriptionItem/DescriptionItem";
 
 export default function NewsBlog(): JSX.Element {
+    const { htmlBody } = useNewsStore()
     return (
         <div className={styles['news-blog']}>
             <div className={styles.header}>
@@ -14,37 +20,23 @@ export default function NewsBlog(): JSX.Element {
             <div className={styles['blog-body']}>
                 <div className={styles['news-body']}>
                     <div className={styles['news-content']}>
-                        <div>
-                            <div>1. 15 марта на корпорацию "Haze" обрушалась большие проблемы в сфере экономики, а 21 марта на корпорацию была произведена хакерская атака. Узнать сторону нападавшего, к сожалению, не удалось. Вечером, того же дня, в лаборатории и в главном заседательском штабе была устроена пожар. Найти поджигателей не удалось, а вся конструкция была сожжена. С того дня корпорация "Haze" потеряла все связи общения и скрытно приостановила своё действия. 13 апреля связь была восстановлена, но вновь пробудить своё влияние в федерации не удалось. Но в скором надеемся, что мы вернем ту былое влияние в федерации.</div>
-                            <div>&nbsp;</div>
-                            <div>2. 16 марта была найдена мёртвое тело директора нашей сотруднической корпорации "Bioreslab", Васко Манригеза. Все данные о корпорации бесследно исчезли. 23 марта корпорация "Bioreslab" прекратила свое существования.</div>
-                            <div>&nbsp;</div>
-                            <div>3. В связи с переездом директора, компании "Полураспад", в Неваду, сотрудничество с его компанией была приостановлена.</div>
-                            <div>&nbsp;</div>
-                            <div>Мы заботимся о вашей здоровье!</div>
-                        </div>
+                        {htmlBody
+                            ? <div className={styles['news-desc']} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlBody) }}></div>
+                            : <Loader />
+                        }
                     </div>
                 </div>
                 <div className={styles['news-body']}>
                     <div className={styles['news-description']}>
                         <ul className={styles['description-items']}>
                             <li>
-                                <div className={styles['description-item']}>
-                                    <span className={styles.title}>Published Date</span>
-                                    <span className={styles.description}>00.00.0000</span>
-                                </div>
+                                <DescriptionItem title="Published Date" description={'00.00.0000'} />
                             </li>
                             <li>
-                                <div className={styles['description-item']}>
-                                    <span className={styles.title}>Category</span>
-                                    <span className={styles.description}>Corporation</span>
-                                </div>
+                                <DescriptionItem title="Category" description={'Corporation'} />
                             </li>
                             <li>
-                                <div className={styles['description-item']}>
-                                    <span className={styles.title}>Author</span>
-                                    <span className={styles.description}>Rail Diablo</span>
-                                </div>
+                                <DescriptionItem title="Author" description={'Rail Diablo'} />
                             </li>
                         </ul>
                     </div>

@@ -60,51 +60,54 @@
             flex-direction: column;
             padding: 25px 0px;
 
+            &:first-child {
+                min-width: 75%;
+                max-width: 75%;
+            }
+
             .news-content {
                 padding: 25px;
                 font-size: 15px;
                 line-height: 24px;
-                color: var(--neutral-color-900)
+                color: var(--neutral-color-900);
+                height: 100%;
+
+                .news-desc {
+
+                    color: var(--neutral-color-900);
+                    gap: 15px;
+
+                    td,
+                    tr,
+                    th {
+                        padding: 3px 4px;
+                        border: 1px solid var(--neutral-color-900);
+                    }
+
+                    td {
+                        text-align: center;
+                    }
+
+                    th:nth-child(odd) {
+                        background-color: orange;
+                        color: white;
+                    }
+
+                    th:nth-child(even) {
+                        background-color: white;
+                        color: orange;
+                    }
+
+                    table {
+                        border-collapse: collapse;
+                        width: 100%;
+                    }
+                }
             }
 
             .news-description {
                 padding: 25px;
                 border-bottom: 2px solid var(--neutral-color-300);
-
-                .description-items {
-                    display: grid;
-                    grid-template-columns: repeat(2, 120px);
-                    gap: 25px;
-
-                    li {
-                        &:nth-child(3) {
-                            grid-column: 1 / span 2;
-                        }
-                    }
-
-                    .description-item {
-                        display: flex;
-                        flex-direction: column;
-
-
-                        .title {
-                            width: 120px;
-                            color: var(--neutral-color-500);
-                            font-size: 13px;
-                            margin-bottom: 5px;
-                            display: inline-block;
-                        }
-
-
-                        .description {
-                            font-size: 14px;
-                            overflow-x: hidden;
-                            white-space: nowrap;
-                            text-overflow: ellipsis;
-                        }
-
-                    }
-                }
             }
 
             .news-links {

@@ -50,6 +50,12 @@
             .paragraph {
                 color: var(--neutral-color-500);
                 font-size: 1.2em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                max-height: 45px;
             }
 
             .info-content {
@@ -59,8 +65,11 @@
                 padding-top: 10px;
 
                 .info-block {
-                    display: flex;
-                    gap: 30px;
+
+                    .info-list {
+                        display: flex;
+                        gap: 30px;
+                    }
 
                 }
 
