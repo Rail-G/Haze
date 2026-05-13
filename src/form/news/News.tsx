@@ -1,9 +1,8 @@
 'use client'
-import { JSX, useState } from "react";
+import { JSX, useReducer, useRef, useState } from "react";
 import styles from '@/form/common/common.module.scss'
 import Icon from "@/components/icon/Icon";
 import Button from "@/components/button/Button";
-import 'suneditor/dist/css/suneditor.min.css';
 import lang from 'suneditor/src/lang'
 import dynamic from "next/dynamic";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
@@ -11,6 +10,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { newsSchema } from "@/schemas/news.schema";
 import z from "zod";
 import Loader from "@/components/loader/Loader";
+import { useNewsStore } from "@/store/news.store";
 
 const SunEditor = dynamic(() => import("suneditor-react"), {
     loading: () => <Loader />,
@@ -18,6 +18,7 @@ const SunEditor = dynamic(() => import("suneditor-react"), {
 });
 
 export default function NewsForm(): JSX.Element {
+    const { setHtmlBody } = useNewsStore()
     const [filesCount, setFilesCount] = useState(0);
     const { register, handleSubmit, setValue, control, reset, formState: { errors } } = useForm({
         defaultValues: {
@@ -41,6 +42,7 @@ export default function NewsForm(): JSX.Element {
 
     const onSubmit: SubmitHandler<z.infer<typeof newsSchema>> = (data) => {
         console.log(data)
+        setHtmlBody(data.text)
         alert('Good!')
     }
     return (
@@ -52,7 +54,7 @@ export default function NewsForm(): JSX.Element {
                 <div className={styles.header}>
                     <h2 className={styles.title}>Создание новости</h2>
                 </div>
-                <form onSubmit={(e) => {e.preventDefault(); console.log(5); console.log(errors); handleSubmit(onSubmit)(e);}} noValidate>
+                <form onSubmit={(e) => { e.preventDefault(); console.log(5); console.log(errors); handleSubmit(onSubmit)(e); }} noValidate>
                     <div className={styles['form-block']}>
                         <div className={styles['form-column']}>
                             <div className={styles['form-row']}>
@@ -104,6 +106,7 @@ export default function NewsForm(): JSX.Element {
                                                         ['fontColor', 'hiliteColor', 'textStyle'],
                                                         ['table', 'image', 'link', 'preview', 'codeView']
                                                     ],
+                                                    imageFileInput: false,
                                                     className: `${styles['editor-style']}`
                                                 }}
                                             />
@@ -114,7 +117,7 @@ export default function NewsForm(): JSX.Element {
                         </div>
                     </div>
                     <div>
-                        <Button type="submit" title="Опубликовать новость" className={styles.button}/>
+                        <Button type="submit" title="Опубликовать новость" className={styles.button} />
                     </div>
                 </form>
             </div>

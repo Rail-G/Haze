@@ -1,5 +1,7 @@
 @use 'normalize';
 @import './variables.css';
+@import '../../node_modules/suneditor/dist/css/suneditor.min.css';
+
 
 body {
     min-height: 100vh;

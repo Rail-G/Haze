@@ -3,7 +3,6 @@ import styles from './newsBlock.module.scss'
 import Image from "next/image";
 import Button from "../button/Button";
 import InfoBlockItem from "./infoBlockItem/InfoBlockItem";
-import { useNewsStore } from "@/store/NewsStore";
 
 export default function NewsBlock(): JSX.Element {
     return (

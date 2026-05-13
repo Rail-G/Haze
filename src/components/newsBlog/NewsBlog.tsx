@@ -1,8 +1,8 @@
 'use client'
-import { JSX, useEffect } from "react";
+import { JSX } from "react";
 import styles from './newsBlog.module.scss'
 import Image from "next/image";
-import { useNewsStore } from "@/store/NewsStore";
+import { useNewsStore } from "@/store/news.store";
 import DOMPurify from 'dompurify'
 import Loader from "../loader/Loader";
 import DescriptionItem from "./descriptionItem/DescriptionItem";

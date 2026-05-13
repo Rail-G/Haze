@@ -8,7 +8,7 @@ export default function ReportItem(): JSX.Element {
         <div className={styles.block}>
             <div className={styles['user-block']}>
                 <span className={styles.author}>Rail Diablo</span>
-                <span className={styles.post}>Second-class Scientific Squad </span>
+                <span className={styles.role}>Second-class Scientific Squad </span>
             </div>
             <div className={styles['info-block']}>
                 <div className={styles.head}>
