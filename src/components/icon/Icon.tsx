@@ -6,6 +6,7 @@ import TaskDone from "./icons/TaskDone"
 import Lock from "./icons/Lock"
 import Minus from "./icons/Minus"
 import Plus from "./icons/Plus"
+import Error from "./icons/Error"
 
 interface IIconProps extends React.SVGProps<SVGSVGElement> {
     iconName: string,
@@ -25,6 +26,7 @@ export default function Icon({iconName, ...props}: IIconProps): React.ReactNode 
         lock: Lock,
         minus: Minus,
         plus: Plus,
+        error: Error
     }
 
     const CurrentIcon = icons[iconName]

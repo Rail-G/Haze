@@ -1,5 +1,5 @@
 'use client'
-import { JSX } from "react";
+import React, { JSX } from "react";
 import styles from '@/form/common/common.module.scss'
 import Icon from "@/components/icon/Icon";
 import Button from "@/components/button/Button";
@@ -7,8 +7,10 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerSchema } from "@/schemas/registration.schema";
 import z from "zod";
+import { toast } from "react-toastify";
 
 export default function RegistrationForm(): JSX.Element {
+
     const {register, handleSubmit, reset, formState: {errors}} = useForm({
         defaultValues: {
             firstName: '',
@@ -22,7 +24,8 @@ export default function RegistrationForm(): JSX.Element {
     })
     const onSubmit: SubmitHandler<z.infer<typeof registerSchema>> = (data) => {
             console.log(data)
-        }
+            toast.loading('Ждемс...')
+    }
     return (
         <div className={styles.popup}>
             <div className={styles.block}>

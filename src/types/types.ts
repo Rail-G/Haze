@@ -24,12 +24,13 @@ export interface ITaskItem {
 }
 
 export interface INewsItem {
+    id: number,
     title: string,
-    description: string,
-    published: string,
+    text: string,
+    createdAt: Date,
     category: string
     author: string,
-    image: string
+    imagePath: string
 }
 
 export interface ILectureItem {

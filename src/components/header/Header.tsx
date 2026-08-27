@@ -1,12 +1,15 @@
-import { JSX } from "react";
+'use client'
+import { JSX, useContext } from "react";
 import styles from './header.module.scss'
 import Icon from "../icon/Icon";
 import { siteConfig } from "@/config/site.config";
 import Link from "next/link";
 import { ROUTES } from "@/constants/routes";
 import Image from "next/image";
+import { ThemeContext } from "../providers/themProvider/ThemeProvider";
 
 export default function Header(): JSX.Element {
+    const {toggleTheme} = useContext(ThemeContext)
     return (
         <header>
             <div className={styles.rectangle}>
@@ -40,10 +43,10 @@ export default function Header(): JSX.Element {
                             </ul>
                         </nav>
                         <div className={styles['toggle-block']}>
-                            <div className={styles.toggle}>
+                            <button className={styles.toggle} onClick={toggleTheme}>
                                 <input type="checkbox" className={styles.checkbox}/>
                                 <div className={styles.switch}></div>
-                            </div>
+                            </button>
                         </div>
                         {/* <div className={styles['auth-block']}>
                             <Link href={ROUTES.AUTHENTICATION} className={styles.auth}>Авторизация</Link>

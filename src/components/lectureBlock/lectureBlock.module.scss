@@ -54,9 +54,13 @@
             display: flex;
             flex-grow: 1;
             flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
+            justify-content: flex-start;
+            // align-items: flex-start;
             gap: 40px;
+
+            li {
+                width: 100%;
+            }
         }
     }
 }

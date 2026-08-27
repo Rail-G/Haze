@@ -122,33 +122,6 @@
                         }
                     }
             }
-
-            .news-links {
-                padding: 25px;
-                gap: 10px;
-
-                .title {
-                    color: var(--neutral-color-500);
-                    font-size: 13px;
-                    margin-bottom: 10px;
-                    display: inline-block;
-                }
-
-                .news-items {
-                    list-style-type: disc;
-                    padding: 15px 15px 15px 40px;
-                    border-radius: 10px;
-                    background-color: var(--neutral-color-300);
-                    display: flex;
-                    flex-direction: column;
-                    gap: 5px;
-
-                    li {
-                        font-size: 14px;
-                    }
-                }
-            }
-
         }
     }
 }

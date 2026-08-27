@@ -3,6 +3,10 @@ import { Poppins } from "next/font/google";
 import "@/styles/globals.scss";
 import Header from "@/components/header/Header";
 import Content from "@/components/content/Content";
+import { ToastContainer } from "react-toastify";
+import MainProvider from "@/components/providers";
+import ThemeSwitcher from "@/components/themeSwitcher/ThemeSwitcher";
+
 
 const poppins = Poppins({
   variable: "--poppins",
@@ -16,12 +20,12 @@ export const metadata: Metadata = {
   description: "Official page of the Haze Corporation scientific association on the SAMP server Trinity Role Play #1",
 };
 
-export const viewport: Viewport = {  
-    width: 'device-width',  
-    initialScale: 1,  
-    maximumScale: 1,  
-    userScalable: false,
-}  
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+}
 
 export default function RootLayout({
   children,
@@ -30,11 +34,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${poppins.variable}`} data-theme='dark'>
-        <Header />
-        <Content>
-          {children}
-        </Content>
+      <body className={`${poppins.variable}`} >
+          <MainProvider>
+          <ThemeSwitcher>
+            <ToastContainer position="bottom-right" autoClose={1000} />
+          <Header />
+          <Content>
+            {children}
+          </Content>
+          </ThemeSwitcher>
+        </MainProvider>
       </body>
     </html>
   );

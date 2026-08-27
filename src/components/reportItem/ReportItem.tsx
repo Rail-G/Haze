@@ -9,6 +9,7 @@ export default function ReportItem(): JSX.Element {
             <div className={styles['user-block']}>
                 <span className={styles.author}>Rail Diablo</span>
                 <span className={styles.role}>Second-class Scientific Squad </span>
+                <Image src={'/profile.png'} className={styles['profile-img']} width={250} height={250} alt="profile image"/>
             </div>
             <div className={styles['info-block']}>
                 <div className={styles.head}>
@@ -23,14 +24,14 @@ export default function ReportItem(): JSX.Element {
                 <div className={styles['img-block']}>
                     <span>Фото отчет</span>
                     <ul className={styles.list}>
-                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
-                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
-                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
-                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
-                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
-                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
-                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
-                        <li><ImagePopup><Image className={styles.img} src='/default.jpg' width={1000} height={500} alt="report img"/></ImagePopup></li>
+                        <li><ImagePopup src={'/default.jpg'} /></li>
+                        <li><ImagePopup src={'/default.jpg'} /></li>
+                        <li><ImagePopup src={'/default.jpg'} /></li>
+                        <li><ImagePopup src={'/default.jpg'} /></li>
+                        <li><ImagePopup src={'/default.jpg'} /></li>
+                        {/* <li><ImagePopup src={'/default.jpg'} /></li> */}
+                        {/* <li><ImagePopup src={'/default.jpg'} /></li> */}
+                        {/* <li><ImagePopup src={'/default.jpg'} /></li> */}
                     </ul>
                 </div>
             </div>
